@@ -9,6 +9,11 @@
         <e p="Script" t="Include">
           <e p="Character" t="Include">
             <e p="Controller.cs" t="Include" />
+            <e p="LegendOfGertrude.cs" t="Include" />
+          </e>
+          <e p="Sword" t="Include">
+            <e p="ItemAttach.cs" t="Include" />
+            <e p="Sword.cs" t="Include" />
           </e>
         </e>
       </e>
