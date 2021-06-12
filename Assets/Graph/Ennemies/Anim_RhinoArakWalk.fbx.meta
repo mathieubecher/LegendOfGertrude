@@ -4,8 +4,8 @@ ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -3419257869308726280
-    second: walk
+      74: 3806175286084229078
+    second: RhinoArakWalk
   externalObjects: {}
   materials:
     materialImportMode: 2

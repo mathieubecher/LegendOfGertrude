@@ -4,8 +4,8 @@ ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -1910902155182987624
-    second: AttackJump
+      74: 6179168642088069423
+    second: RhinoAttackJump
   externalObjects: {}
   materials:
     materialImportMode: 2
