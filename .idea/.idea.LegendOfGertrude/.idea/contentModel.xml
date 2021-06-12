@@ -6,6 +6,34 @@
     <e p="C:\Users\mbelk\Unity\LegendOfGertrude" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Graph" t="Include">
+          <e p="EnvironmentPack" t="Include">
+            <e p="LowPolyFencePack" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="DoorController.cs" t="Include" />
+                <e p="DoorToggle.cs" t="Include" />
+              </e>
+            </e>
+            <e p="LowPolyTreePack" t="Include">
+              <e p="README.txt" t="Include" />
+            </e>
+            <e p="UltimateDungeonPack" t="Include">
+              <e p="Scenes" t="Include">
+                <e p="Demo" t="Include">
+                  <e p="FPControls" t="Include">
+                    <e p="Scripts" t="Include">
+                      <e p="CharacterController.cs" t="Include" />
+                      <e p="MouseCamLook.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="LightImprove.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Script" t="Include">
           <e p="Character" t="Include">
             <e p="AnimFunction.cs" t="Include" />
@@ -16,6 +44,15 @@
               <e p="Move.cs" t="Include" />
               <e p="Tourbilol.cs" t="Include" />
             </e>
+          </e>
+          <e p="Mob" t="Include">
+            <e p="AnimListenMob.cs" t="Include" />
+            <e p="AttackMob.cs" t="Include" />
+            <e p="DetectHuman.cs" t="Include" />
+            <e p="IddleMob.cs" t="Include" />
+            <e p="JumpMob.cs" t="Include" />
+            <e p="Mob.cs" t="Include" />
+            <e p="TrackMob.cs" t="Include" />
           </e>
           <e p="Sword" t="Include">
             <e p="AttachObject.cs" t="Include" />

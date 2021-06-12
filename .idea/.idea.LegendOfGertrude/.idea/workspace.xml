@@ -10,13 +10,20 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Mob/TrackMob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Character/Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Mob/AttackMob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Character/AnimFunction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Mob/JumpMob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Mob/IddleMob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Mob/Mob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Mob/AnimListenMob.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/States/Attack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/LegendOfGertrude.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Character/Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/States/Tourbilol.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/States/Move.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Character/AnimFunction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Mob/DetectHuman.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -28,9 +35,16 @@
         <option value="$PROJECT_DIR$/Assets/Script/Character/Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/States/Tourbilol.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Character/States/Attack.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/AnimFunction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Character/States/Attack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Mob/DetectHuman.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Mob/AttackMob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Mob/AnimListenMob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Mob/IddleMob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Mob/TrackMob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Mob/Mob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Mob/JumpMob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
       </list>
     </option>
   </component>
@@ -65,7 +79,8 @@
       <updated>1623440564244</updated>
       <workItem from="1623440569483" duration="8177000" />
       <workItem from="1623448834322" duration="1496000" />
-      <workItem from="1623482747005" duration="33213000" />
+      <workItem from="1623482747005" duration="33903000" />
+      <workItem from="1623534989433" duration="6509000" />
     </task>
     <servers />
   </component>

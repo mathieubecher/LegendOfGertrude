@@ -13,10 +13,25 @@ public class AttachObject : MonoBehaviour
     public Sword sword;
 
     private bool _destroy = false;
+    private bool _destroyable = true;
+
+
+    private int _originalLayer;
     // Start is called before the first frame update
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _destroyable = (gameObject.layer == LayerMask.NameToLayer("Mob"));
+        if (_destroyable)
+        {
+            Mob originMob;
+            if (TryGetComponent<Mob>(out originMob))
+            {
+                Destroy(originMob);
+                Destroy(GetComponent<Animator>());
+            }
+        }
+        _originalLayer = gameObject.layer;
         gameObject.layer = LayerMask.NameToLayer("Sword");
         collider = GetComponent<Collider>();
         _destroy = false;
@@ -43,6 +58,7 @@ public class AttachObject : MonoBehaviour
         _destroy = true;
         _rigidbody.isKinematic = false;
         _rigidbody.velocity = (forward + Vector3.up) * Vector3.Dot(forward, transform.position - sword.transform.position) * 3;
+
         
         StartCoroutine("DelayDestroy");
 
@@ -51,15 +67,24 @@ public class AttachObject : MonoBehaviour
     IEnumerator DelayDestroy()
     {
         yield return new WaitForSeconds(3.0f);
-        Destroy(gameObject);
+        if(_destroyable)Destroy(gameObject);
+        else
+        {
+            gameObject.layer = _originalLayer;
+            Destroy(this);
+        }
     }
     
     public void OnCollisionEnter(Collision other)
     {
-        if (!sword.attach || other.transform.gameObject.layer == LayerMask.NameToLayer("Character") || other.gameObject.TryGetComponent<AttachObject>(out _)) return;
+        if ((!sword.attach && !_destroy) || other.transform.gameObject.layer == LayerMask.NameToLayer("Character") || other.gameObject.TryGetComponent<AttachObject>(out _)) return;
+        Rigidbody otherRigidBody;
         if (_destroy)
         {
-            Destroy(other.transform.gameObject);
+            if (other.transform.TryGetComponent<Rigidbody>(out otherRigidBody))
+            {
+                Destroy(other.transform.gameObject);
+            }
             return;
         }
         other.transform.SetParent(sword.transform);
@@ -71,7 +96,6 @@ public class AttachObject : MonoBehaviour
         AttachObject otherAttachObjet = other.gameObject.AddComponent<AttachObject>();
         otherAttachObjet.sword = sword;
 
-        Rigidbody otherRigidBody;
         if (other.transform.TryGetComponent<Rigidbody>(out otherRigidBody))
         {
             otherRigidBody.isKinematic = true;
