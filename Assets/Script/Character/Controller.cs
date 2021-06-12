@@ -12,8 +12,6 @@ public class Controller : MonoBehaviour
     private Rigidbody _rigidbody;
     private Vector2 _tilt;
     
-
-    [SerializeField] private AnimationCurve _angularSpeed;
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,18 +23,18 @@ public class Controller : MonoBehaviour
     {
         if (Math.Abs(_tilt.magnitude) > 0.1f)
         {
-            transform.rotation = Quaternion.LookRotation(new Vector3(_tilt.x, 0.0f, _tilt.y));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(new Vector3(_tilt.x, 0.0f, _tilt.y)),5.0f);
             
         }
 
         _rigidbody.velocity = transform.forward * _tilt.magnitude * _moveSpeed + Vector3.up * _rigidbody.velocity.y;
+        _sword.MoveRequest(transform);
         
         
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
-        _sword.MoveRequest(transform);
     }
     
     public void MoveInput(InputAction.CallbackContext context)

@@ -13,7 +13,6 @@
           </e>
           <e p="Sword" t="Include">
             <e p="AttachObject.cs" t="Include" />
-            <e p="Fabrik.cs" t="Include" />
             <e p="Sword.cs" t="Include" />
           </e>
         </e>
