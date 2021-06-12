@@ -30,10 +30,8 @@ public class AttachObject : MonoBehaviour
     
     public void OnCollisionEnter(Collision other)
     {
-        if (other.transform.gameObject.layer == LayerMask.NameToLayer("Character") || other.gameObject.TryGetComponent<AttachObject>(out _)) return;
+        if (!sword.attach || other.transform.gameObject.layer == LayerMask.NameToLayer("Character") || other.gameObject.TryGetComponent<AttachObject>(out _)) return;
         other.transform.SetParent(sword.transform);
-        
-        Debug.Log(other.gameObject);
         
         AttachObject otherAttachObjet = other.gameObject.AddComponent<AttachObject>();
         otherAttachObjet.sword = sword;

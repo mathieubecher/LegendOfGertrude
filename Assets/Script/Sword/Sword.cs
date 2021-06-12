@@ -5,7 +5,8 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     [SerializeField] private Transform _anchor;
-    [SerializeField] private bool _attack = true;
+    [SerializeField] private bool _attach = false;
+    public bool attach{get{return _attach;}}
     private Rigidbody _rigidbody;
     public List<AttachObject> _attachObjects;
     
@@ -44,13 +45,13 @@ public class Sword : MonoBehaviour
     
     public void MoveRequest(Transform actor)
     {
-        Vector3 previousCenter = transform.TransformPoint(_rigidbody.centerOfMass);
-       
         Vector3 previousPos = transform.position;
         transform.position = _anchor.position;
         transform.rotation = _anchor.rotation;
         
         /*
+        Vector3 previousCenter = transform.TransformPoint(_rigidbody.centerOfMass);
+        
         Debug.DrawLine( _anchor.position, _anchor.position + Quaternion.LookRotation(previousCenter - _anchor.position ) * Vector3.forward);
         transform.Rotate(Vector3.up, Vector3.SignedAngle( previousPos - previousCenter, transform.position - previousCenter, Vector3.up) * Mathf.Min(1.0f,Mathf.Max(0.0f,_rigidbody.mass/100.0f)));
         */
