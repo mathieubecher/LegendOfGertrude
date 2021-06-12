@@ -5,7 +5,21 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     [SerializeField] private Transform _anchor;
-    [SerializeField] public bool attach = false;
+    [SerializeField] private bool _attach = false;
+
+    public bool attach
+    {
+        get => _attach;
+        set
+        {
+            foreach (var attachObject in _attachObjects)
+            {
+                if(attachObject.collider != null)
+                    attachObject.collider.isTrigger = !value;
+            }
+            _attach = value;
+        }
+    }
     private Rigidbody _rigidbody;
     public List<AttachObject> _attachObjects;
 
@@ -14,7 +28,7 @@ public class Sword : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _attachObjects = new List<AttachObject>();
-        
+
     }
 
    

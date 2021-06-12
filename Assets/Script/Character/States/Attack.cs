@@ -29,11 +29,7 @@ public class Attack : StateMachineBehaviour
     {
         _controller.sword.MoveRequest(_controller.transform);
         _timer += Time.deltaTime;
-        if (_timer > activeTime && !_controller.sword.attach)
-        {
-            _controller.sword.attach = true;
-            
-        }
+       
         if (_timer > ((_attackInput == 0) ? endLeftState : endRightState))
             _controller.ResetAttack();
     }

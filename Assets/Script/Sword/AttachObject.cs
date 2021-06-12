@@ -6,6 +6,7 @@ using UnityEngine;
 public class AttachObject : MonoBehaviour
 {
     private Rigidbody _rigidbody;
+    public Collider collider;
     public float mass{get{return _rigidbody.mass;}}
     public Vector3 centerOfMass{get{return _rigidbody.centerOfMass;}}
     
@@ -15,6 +16,7 @@ public class AttachObject : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         gameObject.layer = LayerMask.NameToLayer("Sword");
+        collider = GetComponent<Collider>();
     }
 
     void Start()
@@ -39,7 +41,7 @@ public class AttachObject : MonoBehaviour
         
         AttachObject otherAttachObjet = other.gameObject.AddComponent<AttachObject>();
         otherAttachObjet.sword = sword;
-        
+
         Rigidbody otherRigidBody;
         if (other.transform.TryGetComponent<Rigidbody>(out otherRigidBody))
         {
