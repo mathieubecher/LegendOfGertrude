@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Sword : MonoBehaviour
@@ -12,7 +13,7 @@ public class Sword : MonoBehaviour
         get => _attach;
         set
         {
-            foreach (var attachObject in _attachObjects)
+            foreach (var attachObject in attachObjects)
             {
                 if(attachObject.collider != null)
                     attachObject.collider.isTrigger = !value;
@@ -21,28 +22,41 @@ public class Sword : MonoBehaviour
         }
     }
     private Rigidbody _rigidbody;
-    public List<AttachObject> _attachObjects;
+    public List<AttachObject> attachObjects;
 
     // Start is called before the first frame update
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _attachObjects = new List<AttachObject>();
+        attachObjects = new List<AttachObject>();
 
     }
 
-   
-    
     public void Attach(AttachObject other)
     {
-        if (_attachObjects.Contains(other))
+        if (attachObjects.Contains(other))
             return;
         
-        _attachObjects.Add(other);
+        attachObjects.Add(other);
+        UpdateMass();
+    }
+
+    public bool DetachLast()
+    {
+        if (attachObjects.Count <= 1) return false;
+        var attachObject = attachObjects.Last();
+        attachObject.Detach();
+        attachObjects.Remove(attachObject);
+        UpdateMass();
+        return true;
+    }
+
+    public void UpdateMass()
+    {
         
         Vector3 sum = Vector3.zero;
         float mass = 0.0f;
-        foreach (var attachObject in _attachObjects)
+        foreach (var attachObject in attachObjects)
         {
             sum += attachObject.transform.TransformPoint(attachObject.centerOfMass) * attachObject.mass;
             mass += attachObject.mass;
@@ -51,7 +65,6 @@ public class Sword : MonoBehaviour
         _rigidbody.mass = mass;
 
     }
-    
     public void MoveRequest(Transform actor)
     {
         Vector3 previousPos = transform.position;

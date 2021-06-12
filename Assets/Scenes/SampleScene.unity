@@ -2030,6 +2030,18 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 775433675}
+    - target: {fileID: 764424954825305979, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 764424954825305979, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_ActionId
+      value: d9055c2d-e347-4d74-bab4-014862e62a35
+      objectReference: {fileID: 0}
+    - target: {fileID: 764424954825305979, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_ActionName
+      value: Player/Tourbilol[/XInputControllerWindows/buttonSouth,/Keyboard/space]
+      objectReference: {fileID: 0}
     - target: {fileID: 764424954825305980, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
       propertyPath: m_RootOrder
       value: 5

@@ -14,6 +14,7 @@
             <e p="States" t="Include">
               <e p="Attack.cs" t="Include" />
               <e p="Move.cs" t="Include" />
+              <e p="Tourbilol.cs" t="Include" />
             </e>
           </e>
           <e p="Sword" t="Include">

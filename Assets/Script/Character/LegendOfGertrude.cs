@@ -41,6 +41,14 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Tourbilol"",
+                    ""type"": ""Button"",
+                    ""id"": ""d9055c2d-e347-4d74-bab4-014862e62a35"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -217,6 +225,28 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""AttackRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""806f0600-4176-4e70-8ad3-884487f76991"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Tourbilol"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eb57b63c-f187-4c9c-932c-809b35328bad"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Tourbilol"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -797,6 +827,7 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_AttackLeft = m_Player.FindAction("AttackLeft", throwIfNotFound: true);
         m_Player_AttackRight = m_Player.FindAction("AttackRight", throwIfNotFound: true);
+        m_Player_Tourbilol = m_Player.FindAction("Tourbilol", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -861,6 +892,7 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_AttackLeft;
     private readonly InputAction m_Player_AttackRight;
+    private readonly InputAction m_Player_Tourbilol;
     public struct PlayerActions
     {
         private @LegendOfGertrude m_Wrapper;
@@ -868,6 +900,7 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @AttackLeft => m_Wrapper.m_Player_AttackLeft;
         public InputAction @AttackRight => m_Wrapper.m_Player_AttackRight;
+        public InputAction @Tourbilol => m_Wrapper.m_Player_Tourbilol;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -886,6 +919,9 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
                 @AttackRight.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackRight;
                 @AttackRight.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackRight;
                 @AttackRight.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackRight;
+                @Tourbilol.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTourbilol;
+                @Tourbilol.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTourbilol;
+                @Tourbilol.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTourbilol;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -899,6 +935,9 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
                 @AttackRight.started += instance.OnAttackRight;
                 @AttackRight.performed += instance.OnAttackRight;
                 @AttackRight.canceled += instance.OnAttackRight;
+                @Tourbilol.started += instance.OnTourbilol;
+                @Tourbilol.performed += instance.OnTourbilol;
+                @Tourbilol.canceled += instance.OnTourbilol;
             }
         }
     }
@@ -1058,6 +1097,7 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnAttackLeft(InputAction.CallbackContext context);
         void OnAttackRight(InputAction.CallbackContext context);
+        void OnTourbilol(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -14,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/States/Attack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/LegendOfGertrude.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Character/States/Tourbilol.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/States/Move.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/AnimFunction.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -23,12 +24,13 @@
         <option value="$PROJECT_DIR$/Assets/Script/Sword/ItemAttach.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Sword/Fabrik.cs" />
         <option value="$PROJECT_DIR$/Assets/Move.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Character/Controller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Character/States/Attack.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/States/Move.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/AnimFunction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Character/Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Character/States/Tourbilol.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Character/States/Attack.cs" />
       </list>
     </option>
   </component>
@@ -63,7 +65,7 @@
       <updated>1623440564244</updated>
       <workItem from="1623440569483" duration="8177000" />
       <workItem from="1623448834322" duration="1496000" />
-      <workItem from="1623482747005" duration="28509000" />
+      <workItem from="1623482747005" duration="32615000" />
     </task>
     <servers />
   </component>

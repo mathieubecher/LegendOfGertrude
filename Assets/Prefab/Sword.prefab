@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806933523297449131}
-  m_LocalRotation: {x: -0.640831, y: -0, z: -0, w: 0.7676821}
+  m_LocalRotation: {x: -0.6408335, y: 0, z: 0, w: 0.7676799}
   m_LocalPosition: {x: -2.73, y: 2.48, z: -16.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anchor: {fileID: 0}
-  attach: 0
-  _attachObjects: []
+  _attach: 0
+  attachObjects: []
 --- !u!54 &3806933523297449132
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca53b0f7e24787d459e9399171a9d5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collider: {fileID: 0}
   sword: {fileID: 3806933523297449133}
 --- !u!33 &3806933524118084233
 MeshFilter:
@@ -172,8 +173,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.6}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!54 &3806933524118084235
 Rigidbody:
   m_ObjectHideFlags: 0

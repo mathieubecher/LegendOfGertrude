@@ -55,6 +55,13 @@ public class Controller : MonoBehaviour
         attackInput = 1;
         
     }
+    
+    public void Tourbilol(InputAction.CallbackContext context)
+    {
+        Debug.Log("test");
+        if (context.performed) _fsm.SetBool("StartTourbilol", true);
+        else if(context.canceled) _fsm.SetBool("StartTourbilol", false);
+    }
 
     public void ResetAttack()
     {

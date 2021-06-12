@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sword: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 4736938521200976651}
   attackInput: 0
   rigidbody: {fileID: 0}
   tilt: {x: 0, y: 0}
@@ -168,6 +168,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: eb5276f1-6bba-422c-a186-c45f52d4b4a8
     m_ActionName: Player/AttackRight[/Mouse/rightButton,/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 764424954825305978}
+        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
+        m_MethodName: Tourbilol
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d9055c2d-e347-4d74-bab4-014862e62a35
+    m_ActionName: Player/Tourbilol[/XInputControllerWindows/buttonSouth,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -294,14 +310,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764424955320880823}
-  m_LocalRotation: {x: -0.8183331, y: 0.09975954, z: 0.56346416, w: 0.053732816}
+  m_LocalRotation: {x: -0.8796262, y: 0.19737245, z: 0.17359853, w: 0.39644095}
   m_LocalPosition: {x: -0.003, y: 0.07, z: 0.014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3812117592968550099}
   m_Father: {fileID: 7437204914836712465}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -168.442, y: 428.489, z: -353.982}
+  m_LocalEulerAnglesHint: {x: -130.007, y: 373.393, z: -340.97302}
 --- !u!1 &1973092902857547151
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66afee0f185346d4282792ff4a491366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sword: {fileID: 0}
 --- !u!1001 &9116392566374945753
 PrefabInstance:
   m_ObjectHideFlags: 0

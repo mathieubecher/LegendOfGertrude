@@ -11,12 +11,15 @@ public class AttachObject : MonoBehaviour
     public Vector3 centerOfMass{get{return _rigidbody.centerOfMass;}}
     
     public Sword sword;
+
+    private bool _destroy = false;
     // Start is called before the first frame update
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         gameObject.layer = LayerMask.NameToLayer("Sword");
         collider = GetComponent<Collider>();
+        _destroy = false;
     }
 
     void Start()
@@ -29,10 +32,36 @@ public class AttachObject : MonoBehaviour
         
     }
 
+    public void Detach()
+    {
+        
+        Vector3 forward = sword.transform.forward;
+        transform.parent = null;
+        collider.isTrigger = false;
+        _rigidbody.constraints = RigidbodyConstraints.None;
+        _rigidbody.useGravity = true;
+        _destroy = true;
+        _rigidbody.isKinematic = false;
+        _rigidbody.velocity = (forward + Vector3.up) * Vector3.Dot(forward, transform.position - sword.transform.position) * 3;
+        
+        StartCoroutine("DelayDestroy");
+
+    }
+
+    IEnumerator DelayDestroy()
+    {
+        yield return new WaitForSeconds(3.0f);
+        Destroy(gameObject);
+    }
     
     public void OnCollisionEnter(Collision other)
     {
         if (!sword.attach || other.transform.gameObject.layer == LayerMask.NameToLayer("Character") || other.gameObject.TryGetComponent<AttachObject>(out _)) return;
+        if (_destroy)
+        {
+            Destroy(other.transform.gameObject);
+            return;
+        }
         other.transform.SetParent(sword.transform);
         
         
