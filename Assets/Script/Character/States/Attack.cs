@@ -7,9 +7,6 @@ public class Attack : StateMachineBehaviour
     private Controller _controller;
     public float _timer;
     private int _attackInput;
-    
-    public float endLeftState = 1.4f;
-    public float endRightState = 1.4f;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -28,8 +25,6 @@ public class Attack : StateMachineBehaviour
         _timer += Time.deltaTime;
         _controller.rigidbody.velocity = Vector3.zero;
        
-        if (_timer > ((_attackInput == 0) ? endLeftState : endRightState))
-            _controller.ResetAttack();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

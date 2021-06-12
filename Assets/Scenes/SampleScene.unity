@@ -818,11 +818,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!95 &775433675 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4736938521200976651, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-  m_PrefabInstance: {fileID: 764424954689216158}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &806015692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,22 +2021,6 @@ PrefabInstance:
       propertyPath: sword
       value: 
       objectReference: {fileID: 1664345084}
-    - target: {fileID: 764424954825305978, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 775433675}
-    - target: {fileID: 764424954825305979, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 764424954825305979, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_ActionId
-      value: d9055c2d-e347-4d74-bab4-014862e62a35
-      objectReference: {fileID: 0}
-    - target: {fileID: 764424954825305979, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_ActionName
-      value: Player/Tourbilol[/XInputControllerWindows/buttonSouth,/Keyboard/space]
-      objectReference: {fileID: 0}
     - target: {fileID: 764424954825305980, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2086,42 +2065,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 764424955320880820, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.39644095
-      objectReference: {fileID: 0}
-    - target: {fileID: 764424955320880820, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.8796262
-      objectReference: {fileID: 0}
-    - target: {fileID: 764424955320880820, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.19737245
-      objectReference: {fileID: 0}
-    - target: {fileID: 764424955320880820, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.17359853
-      objectReference: {fileID: 0}
-    - target: {fileID: 764424955320880820, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -130.007
-      objectReference: {fileID: 0}
-    - target: {fileID: 764424955320880820, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 373.393
-      objectReference: {fileID: 0}
-    - target: {fileID: 764424955320880820, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -340.97302
-      objectReference: {fileID: 0}
     - target: {fileID: 6202570256892518701, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
       propertyPath: sword
       value: 
       objectReference: {fileID: 1664345084}
-    - target: {fileID: 8721598637562868786, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7438ce612da02cc4b9257c88b15e2e54, type: 3}
 --- !u!1001 &3806933524856461137
@@ -2178,10 +2125,6 @@ PrefabInstance:
     - target: {fileID: 3806933523297449131, guid: 0955c9fbaf7135e40bef3e5fa03dfe2f, type: 3}
       propertyPath: m_Name
       value: Sword
-      objectReference: {fileID: 0}
-    - target: {fileID: 3806933523297449131, guid: 0955c9fbaf7135e40bef3e5fa03dfe2f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3806933523297449133, guid: 0955c9fbaf7135e40bef3e5fa03dfe2f, type: 3}
       propertyPath: _anchor

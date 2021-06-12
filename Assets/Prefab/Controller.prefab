@@ -445,6 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sword: {fileID: 0}
+  controller: {fileID: 764424954825305978}
 --- !u!1001 &9116392566374945753
 PrefabInstance:
   m_ObjectHideFlags: 0
