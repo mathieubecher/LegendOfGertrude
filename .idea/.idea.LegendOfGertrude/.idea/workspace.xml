@@ -10,15 +10,19 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Sword/ItemAttach.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Character/LegendOfGertrude.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Sword/Fabrik.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Script/Sword/ItemAttach.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Sword/Fabrik.cs" />
       </list>
     </option>
   </component>
@@ -27,6 +31,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -51,7 +56,8 @@
       <option name="presentableId" value="Default" />
       <updated>1623440564244</updated>
       <workItem from="1623440569483" duration="8177000" />
-      <workItem from="1623448834322" duration="846000" />
+      <workItem from="1623448834322" duration="1496000" />
+      <workItem from="1623482747005" duration="9414000" />
     </task>
     <servers />
   </component>
