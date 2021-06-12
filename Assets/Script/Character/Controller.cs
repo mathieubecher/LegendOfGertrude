@@ -9,8 +9,9 @@ public class Controller : MonoBehaviour
 {
     public Sword sword;
     
-    [SerializeField]private Animator _animation;
+    public Animator animator;
     private Animator _fsm;
+    public int attackInput;
 
     [HideInInspector] public Rigidbody rigidbody;
     public Vector2 tilt;
@@ -30,7 +31,7 @@ public class Controller : MonoBehaviour
 
     private void UpdateAnim()
     {
-        _animation.SetFloat("Speed", rigidbody.velocity.ProjectOntoPlane(Vector3.up).magnitude);
+        animator.SetFloat("Speed", rigidbody.velocity.ProjectOntoPlane(Vector3.up).magnitude);
     }
 
     void FixedUpdate()
@@ -43,13 +44,20 @@ public class Controller : MonoBehaviour
     }
     public void AttackLeft(InputAction.CallbackContext context)
     {
+        if (!context.performed) return;
         _fsm.SetBool("Attack", true);
-        _animation.SetInteger("AttackState", 0);
+        attackInput = 0;
     }
     public void AttackRight(InputAction.CallbackContext context)
     {
+        if (!context.performed) return;
         _fsm.SetBool("Attack", true);
-        _animation.SetInteger("AttackState", 1);
+        attackInput = 1;
         
+    }
+
+    public void ResetAttack()
+    {
+        _fsm.SetBool("Attack", false);
     }
 }

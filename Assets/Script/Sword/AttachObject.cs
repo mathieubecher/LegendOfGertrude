@@ -33,6 +33,10 @@ public class AttachObject : MonoBehaviour
         if (!sword.attach || other.transform.gameObject.layer == LayerMask.NameToLayer("Character") || other.gameObject.TryGetComponent<AttachObject>(out _)) return;
         other.transform.SetParent(sword.transform);
         
+        
+        Vector3 center = sword.transform.forward;
+        other.transform.position = Vector3.Lerp(other.transform.position,Vector3.Dot(center, other.transform.position - sword.transform.position) * center + sword.transform.position, 0.8f);
+        
         AttachObject otherAttachObjet = other.gameObject.AddComponent<AttachObject>();
         otherAttachObjet.sword = sword;
         

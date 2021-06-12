@@ -21,12 +21,12 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Script/Sword/ItemAttach.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Sword/Fabrik.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Move.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Character/Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Character/States/Move.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Character/Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/States/Attack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Character/States/Move.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
       </list>
     </option>
   </component>
@@ -61,7 +61,7 @@
       <updated>1623440564244</updated>
       <workItem from="1623440569483" duration="8177000" />
       <workItem from="1623448834322" duration="1496000" />
-      <workItem from="1623482747005" duration="23545000" />
+      <workItem from="1623482747005" duration="27097000" />
     </task>
     <servers />
   </component>

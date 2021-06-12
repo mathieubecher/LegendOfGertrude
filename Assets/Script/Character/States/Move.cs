@@ -20,7 +20,6 @@ public class Move : StateMachineBehaviour
         if (Math.Abs(_controller.tilt.magnitude) > 0.1f)
         {
             _controller.transform.rotation = Quaternion.RotateTowards(_controller.transform.rotation, Quaternion.LookRotation(new Vector3(_controller.tilt.x, 0.0f, _controller.tilt.y)),_angularSpeed * Time.deltaTime);
-            
         }
 
         _controller.rigidbody.velocity = _controller.transform.forward * _controller.tilt.magnitude * _moveSpeed + Vector3.up * _controller.rigidbody.velocity.y;

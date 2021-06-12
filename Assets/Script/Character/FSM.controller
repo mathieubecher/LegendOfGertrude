@@ -154,6 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add29cc9f8ba35344a518669831d4e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timer: 0
+  endLeftState: 1
+  endRightState: 1
+  activeTime: 0.2
 --- !u!1101 &7927205511095246849
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
