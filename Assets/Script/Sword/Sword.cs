@@ -5,25 +5,20 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     [SerializeField] private Transform _anchor;
-    [SerializeField] private bool _attach = false;
-    public bool attach{get{return _attach;}}
+    [SerializeField] public bool attach = false;
     private Rigidbody _rigidbody;
     public List<AttachObject> _attachObjects;
-    
+
     // Start is called before the first frame update
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _attachObjects = new List<AttachObject>();
-        _anchor.rotation = transform.rotation;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 
+   
+    
     public void Attach(AttachObject other)
     {
         if (_attachObjects.Contains(other))
@@ -33,10 +28,10 @@ public class Sword : MonoBehaviour
         
         Vector3 sum = Vector3.zero;
         float mass = 0.0f;
-        foreach (var attach in _attachObjects)
+        foreach (var attachObject in _attachObjects)
         {
-            sum += attach.transform.TransformPoint(attach.centerOfMass) * attach.mass;
-            mass += attach.mass;
+            sum += attachObject.transform.TransformPoint(attachObject.centerOfMass) * attachObject.mass;
+            mass += attachObject.mass;
         }
         _rigidbody.centerOfMass = transform.InverseTransformPoint(sum/mass);
         _rigidbody.mass = mass;
