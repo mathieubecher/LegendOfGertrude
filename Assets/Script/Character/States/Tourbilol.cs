@@ -30,8 +30,9 @@ public class Tourbilol : StateMachineBehaviour
         _playedSourcePreTourbilol = false;
         _playedSourceTourbilol = false;
         _controller = animator.GetComponent<Controller>();
+        _controller.rigidbody.velocity = Vector3.zero;
         _timer = 0.0f;
-        _toEjectAtStart = 5 + _controller.sword.attachObjects.Count / 2;
+        _toEjectAtStart = 1 + _controller.sword.attachObjects.Count / 2;
         _ejected = 0;
         animator.SetBool("StartTourbilol", true);
         _controller.animator.SetBool("LoadTourbilol", true);

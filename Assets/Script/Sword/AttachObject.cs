@@ -59,6 +59,9 @@ public class AttachObject : MonoBehaviour
             source.PlayOneShot(sword.chicken[Random.Range(0, sword.chicken.Count)]);
             GetComponent<Animator>().SetBool("Attach", true);
         }
+        else if (_originalLayer == LayerMask.NameToLayer("Gertrude"))
+            source.PlayOneShot(sword.gertrude[Random.Range(0, sword.gertrude.Count)]);
+        
         sword.Attach(this);
     }
     // Update is called once per frame

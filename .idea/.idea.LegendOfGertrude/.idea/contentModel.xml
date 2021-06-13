@@ -33,6 +33,13 @@
               </e>
             </e>
           </e>
+          <e p="Groundtexture" t="Include">
+            <e p="Hand Painted Seamless ClayGround Texture" t="Include">
+              <e p="Documentation" t="Include">
+                <e p="Documentation.txt" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="Script" t="Include">
           <e p="Character" t="Include">

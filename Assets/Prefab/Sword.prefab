@@ -362,6 +362,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1b1ea50b51f696944b8142989cb9dbb4, type: 3}
   - {fileID: 8300000, guid: 32e2334ff34b2f445a942b7c01d97954, type: 3}
   - {fileID: 8300000, guid: 5dcdbef917cc58743bee209ee2e71e9b, type: 3}
+  gertrude:
+  - {fileID: 8300000, guid: ee1e8651b19e1c54182d02dc2fcd5f6c, type: 3}
   _attach: 0
   destroy: 0
   attachObjects: []

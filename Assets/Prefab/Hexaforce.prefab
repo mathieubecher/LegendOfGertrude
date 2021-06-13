@@ -249,8 +249,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ab1c456102124f54b9ac73a185735796, type: 2}
-    m_RemovedComponents:
-    - {fileID: 6400000, guid: c4534353dff9c6c468c490e0560f8f91, type: 3}
+    - target: {fileID: 6400000, guid: c4534353dff9c6c468c490e0560f8f91, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4534353dff9c6c468c490e0560f8f91, type: 3}
 --- !u!1 &4545327178015520805 stripped
 GameObject:

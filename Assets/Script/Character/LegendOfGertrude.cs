@@ -187,7 +187,7 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""464f9de0-cf8d-4039-aba2-39b700bd85f5"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -198,7 +198,7 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0e00bb84-8afc-4bd7-a74e-1742cc000c5e"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -209,7 +209,7 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e88421ff-986a-480c-ba8a-d4c8de6c04d1"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -220,7 +220,7 @@ public class @LegendOfGertrude : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""73080e5f-97bf-4ab5-9b53-fe36c85ea124"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
