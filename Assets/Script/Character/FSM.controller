@@ -227,6 +227,9 @@ MonoBehaviour:
   _loadPhase: 1.5
   _tourbilolPhase: 4
   _stunPhase: 6
+  _swordOrientation: {x: 0, y: 0, z: 0}
+  _sourcePreTourbilol: {fileID: 8300000, guid: 242f954552ae7764ab3acceb7700bc17, type: 3}
+  _sourceTourbilol: {fileID: 8300000, guid: 29b6c30a58e933c4b9654c5b2d149b65, type: 3}
   _timer: 0
 --- !u!91 &9100000
 AnimatorController:

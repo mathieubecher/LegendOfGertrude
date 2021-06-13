@@ -9,6 +9,7 @@ public class Controller : MonoBehaviour
 {
     public Sword sword;
     
+    public AudioSource source;
     public Animator animator;
     private Animator _fsm;
     public int attackInput;

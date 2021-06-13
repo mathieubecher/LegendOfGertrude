@@ -6,7 +6,18 @@ public class AnimFunction : MonoBehaviour
 {
     public Sword sword;
     public Controller controller;
+    public AudioSource source;
 
+    public List<AudioClip> steps;
+    public List<AudioClip> attack;
+    public AudioClip dead;
+
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+        
+    }
+    
     public void ActivateWeapon()
     {
         sword.attach = true;
@@ -20,4 +31,18 @@ public class AnimFunction : MonoBehaviour
     {
         controller.ResetDamage();
     }
+
+    public void PlayStep()
+    {
+        source.PlayOneShot(steps[Random.Range(0, steps.Count)]);
+    }
+    public void PlayAttack()
+    {
+        source.PlayOneShot(attack[Random.Range(0, attack.Count)]);
+    }
+    public void PlayDead()
+    {
+        source.PlayOneShot(dead);
+    }
+
 }

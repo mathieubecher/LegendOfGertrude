@@ -47,6 +47,8 @@ public class ChillChicken : StateMachineBehaviour
                 
             }
         }
+        else 
+            _chicken.rigidbody.velocity = Vector3.zero;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
