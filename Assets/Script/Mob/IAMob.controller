@@ -44,7 +44,7 @@ MonoBehaviour:
   _damageTimer: 0.3
   _damageValue: 1
   damage: 0
-  _damageDistance: 2
+  _damageDistance: 3
 --- !u!1102 &-7823125159850547163
 AnimatorState:
   serializedVersion: 6
@@ -441,7 +441,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Distance
-    m_EventTreshold: 1
+    m_EventTreshold: 2
   - m_ConditionMode: 1
     m_ConditionEvent: Target
     m_EventTreshold: 0

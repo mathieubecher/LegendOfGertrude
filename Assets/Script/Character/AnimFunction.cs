@@ -34,7 +34,7 @@ public class AnimFunction : MonoBehaviour
 
     public void PlayStep()
     {
-        source.PlayOneShot(steps[Random.Range(0, steps.Count)]);
+        source.PlayOneShot(steps[Random.Range(0, steps.Count)], 0.2f);
     }
     public void PlayAttack()
     {
