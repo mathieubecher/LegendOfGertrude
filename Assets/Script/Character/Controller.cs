@@ -8,13 +8,13 @@ using UnityEngine.InputSystem;
 public class Controller : MonoBehaviour
 {
     public Sword sword;
-    
+
+    private HUDmanager _hud;
     public AudioSource source;
     public Animator animator;
     private Animator _fsm;
     public int attackInput;
-    public float life = 6.0f;
-    public int hexaforce = 0;
+    public int life = 6;
     public List<Hexaforce> hexaforces;
     public void AddHexaforce(Hexaforce fragHexaforce)
     {
@@ -29,6 +29,7 @@ public class Controller : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        _hud = FindObjectOfType<HUDmanager>();
         rigidbody = GetComponent<Rigidbody>();
         _fsm = GetComponent<Animator>();
         hexaforces = new List<Hexaforce>();
@@ -38,6 +39,10 @@ public class Controller : MonoBehaviour
     void Update()
     {
         UpdateAnim();
+        _hud.Health = life;
+        _hud.Hexaforce = hexaforces.Count;
+        _hud.Weight = (int)Mathf.Ceil(sword.mass);
+
     }
 
     private void UpdateAnim()
@@ -83,7 +88,7 @@ public class Controller : MonoBehaviour
         _fsm.SetBool("Damage", false);
     }
     
-    public void Damage(float damageValue)
+    public void Damage(int damageValue)
     {
         life -= damageValue;
         if (life <= 0)

@@ -54,7 +54,7 @@ MonoBehaviour:
   source: {fileID: 8452546295538222675}
   animator: {fileID: 4736938521200976651}
   attackInput: 0
-  life: 0.5
+  life: 6
   hexaforce: 0
   hexaforces: []
   rigidbody: {fileID: 0}

@@ -18,10 +18,19 @@ public class AttachObject : MonoBehaviour
     private GameObject _ejectTrail;
 
     private int _originalLayer;
+    private Quaternion _originalRotation;
+
+    private RigidbodyConstraints _originalConstraint;
     // Start is called before the first frame update
     void Awake()
     {
+        
         _rigidbody = GetComponent<Rigidbody>();
+        
+        _originalLayer = gameObject.layer;
+        _originalRotation = transform.rotation;
+        _originalConstraint = _rigidbody.constraints;
+        
         _destroyable = (gameObject.layer == LayerMask.NameToLayer("Mob"));
         if (_destroyable)
         {
@@ -33,7 +42,6 @@ public class AttachObject : MonoBehaviour
                 Destroy(GetComponent<Animator>());
             }
         }
-        _originalLayer = gameObject.layer;
         gameObject.layer = LayerMask.NameToLayer("Sword");
         collider = GetComponent<Collider>();
         _destroy = false;
@@ -41,6 +49,16 @@ public class AttachObject : MonoBehaviour
 
     void Start()
     {
+        AudioSource source = sword.controller.animator.GetComponent<AudioSource>();
+        if(_originalLayer == LayerMask.NameToLayer("Mob"))
+            source.PlayOneShot(sword.mob[Random.Range(0, sword.mob.Count)]);
+        else if(_originalLayer == LayerMask.NameToLayer("PNJ"))
+            source.PlayOneShot(sword.old[Random.Range(0, sword.old.Count)]);
+        else if (_originalLayer == LayerMask.NameToLayer("Chicken"))
+        {
+            source.PlayOneShot(sword.chicken[Random.Range(0, sword.chicken.Count)]);
+            GetComponent<Animator>().SetBool("Attach", true);
+        }
         sword.Attach(this);
     }
     // Update is called once per frame
@@ -74,6 +92,12 @@ public class AttachObject : MonoBehaviour
         else
         {
             gameObject.layer = _originalLayer;
+            transform.rotation = _originalRotation;
+            _rigidbody.constraints = _originalConstraint;
+            if (_originalLayer == LayerMask.NameToLayer("Chicken"))
+            {
+                GetComponent<Animator>().SetBool("Attach", false);
+            }
             Destroy(this);
         }
     }
