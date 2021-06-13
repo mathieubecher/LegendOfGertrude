@@ -76,6 +76,7 @@
             <e p="Spawner.cs" t="Include" />
             <e p="TrackMob.cs" t="Include" />
           </e>
+          <e p="PNJDialog.cs" t="Include" />
           <e p="Sword" t="Include">
             <e p="AttachObject.cs" t="Include" />
             <e p="HitVFX.cs" t="Include" />

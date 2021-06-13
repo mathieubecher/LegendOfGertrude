@@ -3561,6 +3561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OldMan
       objectReference: {fileID: 0}
+    - target: {fileID: 5601303168478602578, guid: 8b91e7537427f7445a2f40daf8be8ab1, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b91e7537427f7445a2f40daf8be8ab1, type: 3}
 --- !u!1001 &4906375584314675080
@@ -3570,21 +3574,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4891290449779390847, guid: 740be6aa9d900ec4ca7a396af28af2ea, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4906375584409742464, guid: 740be6aa9d900ec4ca7a396af28af2ea, type: 3}
       propertyPath: m_Name
       value: Hexaforce
-      objectReference: {fileID: 0}
-    - target: {fileID: 4906375584409742465, guid: 740be6aa9d900ec4ca7a396af28af2ea, type: 3}
-      propertyPath: m_Constraints
-      value: 126
-      objectReference: {fileID: 0}
-    - target: {fileID: 4906375584409742465, guid: 740be6aa9d900ec4ca7a396af28af2ea, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4906375584409742466, guid: 740be6aa9d900ec4ca7a396af28af2ea, type: 3}
       propertyPath: m_RootOrder
@@ -3755,6 +3747,10 @@ PrefabInstance:
     - target: {fileID: 5301825241787540279, guid: 44e72e6b4fd1f254992d2725cc910715, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426894655561646851, guid: 44e72e6b4fd1f254992d2725cc910715, type: 3}
+      propertyPath: m_CookingOptions
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5794573185787799798, guid: 44e72e6b4fd1f254992d2725cc910715, type: 3}
       propertyPath: m_Layer

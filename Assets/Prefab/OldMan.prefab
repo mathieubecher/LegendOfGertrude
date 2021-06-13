@@ -30,6 +30,7 @@ GameObject:
   - component: {fileID: 4414894723099992513}
   - component: {fileID: 4414894723099992575}
   - component: {fileID: 4414894723099992512}
+  - component: {fileID: 3021994425090705439}
   m_Layer: 10
   m_Name: OldMan
   m_TagString: Untagged
@@ -83,6 +84,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.6, z: 0}
+--- !u!114 &3021994425090705439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414894723099992514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c37dec90eebce4f8802231b82a1592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDist: 5
+  transorm: {fileID: 0}
+  animator: {fileID: 8614714431071488489}
 --- !u!114 &914086360203066645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8452372642485116090, guid: 3e44585c50d02fd4bb72ea0b7781b474, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.32
+      value: 0.105
       objectReference: {fileID: 0}
     - target: {fileID: 8452372642485116090, guid: 3e44585c50d02fd4bb72ea0b7781b474, type: 3}
       propertyPath: m_LocalRotation.w
@@ -172,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8452372642485116090, guid: 3e44585c50d02fd4bb72ea0b7781b474, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.26
+      value: 1.045
       objectReference: {fileID: 0}
     - target: {fileID: 8452372642485116090, guid: 3e44585c50d02fd4bb72ea0b7781b474, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -482,3 +498,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf2ae192dacd8ff40af42566e4c5347e, type: 3}
+--- !u!95 &8614714431071488489 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4234459109346061954, guid: bf2ae192dacd8ff40af42566e4c5347e, type: 3}
+  m_PrefabInstance: {fileID: 5570476917163796331}
+  m_PrefabAsset: {fileID: 0}

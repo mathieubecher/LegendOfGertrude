@@ -52,8 +52,11 @@ public class AttachObject : MonoBehaviour
         AudioSource source = sword.controller.animator.GetComponent<AudioSource>();
         if(_originalLayer == LayerMask.NameToLayer("Mob"))
             source.PlayOneShot(sword.mob[Random.Range(0, sword.mob.Count)]);
-        else if(_originalLayer == LayerMask.NameToLayer("PNJ"))
+        else if (_originalLayer == LayerMask.NameToLayer("PNJ"))
+        {
             source.PlayOneShot(sword.old[Random.Range(0, sword.old.Count)]);
+            GetComponent<PNJDialog>().animator.SetTrigger("StickedToSword");
+        }
         else if (_originalLayer == LayerMask.NameToLayer("Chicken"))
         {
             source.PlayOneShot(sword.chicken[Random.Range(0, sword.chicken.Count)]);
@@ -100,6 +103,10 @@ public class AttachObject : MonoBehaviour
             if (_originalLayer == LayerMask.NameToLayer("Chicken"))
             {
                 GetComponent<Animator>().SetBool("Attach", false);
+            }
+            else if(_originalLayer == LayerMask.NameToLayer("PNJ"))
+            {
+                GetComponent<PNJDialog>().animator.SetTrigger("Reset");
             }
             Destroy(this);
         }
