@@ -94,8 +94,12 @@ public class AttachObject : MonoBehaviour
         
         
         Vector3 center = sword.transform.forward;
-        other.transform.position = Vector3.Lerp(other.transform.position,Vector3.Dot(center, other.transform.position - sword.transform.position) * center + sword.transform.position, 0.8f);
+        Vector3 centeredPos = Vector3.Dot(center, other.transform.position - sword.transform.position) * center + sword.transform.position;
+        other.transform.position = Vector3.Lerp(other.transform.position,centeredPos, 0.8f);
         
+        GameObject VFX = Instantiate(sword.attachVFX, sword.transform);
+        VFX.transform.rotation = Quaternion.LookRotation(centeredPos - other.transform.position);
+        VFX.transform.position = other.transform.position;
         AttachObject otherAttachObjet = other.gameObject.AddComponent<AttachObject>();
         otherAttachObjet.sword = sword;
 

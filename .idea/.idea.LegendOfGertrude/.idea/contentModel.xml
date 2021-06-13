@@ -48,6 +48,14 @@
               <e p="Tourbilol.cs" t="Include" />
             </e>
           </e>
+          <e p="Chicken" t="Include">
+            <e p="Chicken.cs" t="Include" />
+            <e p="DetectMob.cs" t="Include" />
+            <e p="State" t="Include">
+              <e p="ChillChicken.cs" t="Include" />
+              <e p="PanicChicken.cs" t="Include" />
+            </e>
+          </e>
           <e p="Mob" t="Include">
             <e p="AnimListenMob.cs" t="Include" />
             <e p="AttackMob.cs" t="Include" />
@@ -60,6 +68,7 @@
           </e>
           <e p="Sword" t="Include">
             <e p="AttachObject.cs" t="Include" />
+            <e p="HitVFX.cs" t="Include" />
             <e p="Sword.cs" t="Include" />
           </e>
         </e>
