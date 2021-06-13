@@ -16,4 +16,8 @@ public class AnimFunction : MonoBehaviour
     {
         controller.ResetAttack();
     }
+    public void EndDamage()
+    {
+        controller.ResetDamage();
+    }
 }

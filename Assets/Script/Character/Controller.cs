@@ -12,6 +12,7 @@ public class Controller : MonoBehaviour
     public Animator animator;
     private Animator _fsm;
     public int attackInput;
+    public float life = 6.0f;
 
     [HideInInspector] public Rigidbody rigidbody;
     public Vector2 tilt;
@@ -67,4 +68,29 @@ public class Controller : MonoBehaviour
     {
         _fsm.SetBool("Attack", false);
     }
+
+    public void ResetDamage()
+    {
+        _fsm.SetBool("Damage", false);
+    }
+    
+    public void Damage(float damageValue)
+    {
+        life -= damageValue;
+        if (life <= 0)
+        {
+            Dead();
+        }
+        else
+        {
+            _fsm.SetBool("Damage", true);
+        }
+    }
+
+    private void Dead()
+    {
+        Debug.Log("Dead");
+        _fsm.SetTrigger("Dead");
+    }
+
 }

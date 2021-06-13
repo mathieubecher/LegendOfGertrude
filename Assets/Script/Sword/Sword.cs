@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    [SerializeField] private Transform _anchor;
+    [SerializeField] public Transform anchor;
     [SerializeField] private bool _attach = false;
+    public bool destroy = false;
 
     public bool attach
     {
@@ -22,6 +23,9 @@ public class Sword : MonoBehaviour
         }
     }
     private Rigidbody _rigidbody;
+    
+    public float mass{get{return _rigidbody.mass;}}
+    public Vector3 centerOfMass{get{return _rigidbody.centerOfMass;}}
     public List<AttachObject> attachObjects;
 
     // Start is called before the first frame update
@@ -41,6 +45,14 @@ public class Sword : MonoBehaviour
         UpdateMass();
     }
 
+    public void Tourbilol(bool start = true)
+    {
+        destroy = start;
+        foreach (var attachObject in attachObjects)
+        {
+            attachObject.collider.isTrigger = !start;
+        }
+    }
     public bool DetachLast()
     {
         if (attachObjects.Count <= 1) return false;
@@ -68,8 +80,8 @@ public class Sword : MonoBehaviour
     public void MoveRequest(Transform actor)
     {
         Vector3 previousPos = transform.position;
-        transform.position = _anchor.position;
-        transform.rotation = _anchor.rotation;
+        transform.position = anchor.position;
+        transform.rotation = anchor.rotation;
         
         /*
         Vector3 previousCenter = transform.TransformPoint(_rigidbody.centerOfMass);
@@ -98,5 +110,18 @@ public class Sword : MonoBehaviour
         Gizmos.color = Color.red;
         
         Gizmos.DrawSphere(transform.TransformPoint(_rigidbody.centerOfMass), Mathf.Min(10,_rigidbody.mass/100.0f));
+    }
+
+    public void Dead()
+    {
+        foreach (var attachObject in attachObjects)
+        {
+            attachObject.transform.parent = null;
+            attachObject.gameObject.layer = LayerMask.NameToLayer("Dead");
+            var rb = attachObject.GetComponent<Rigidbody>();
+            attachObject.collider.isTrigger = false;
+            rb.isKinematic = false;
+            rb.useGravity = true;
+        }
     }
 }

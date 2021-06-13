@@ -10,6 +10,7 @@ public class Mob : MonoBehaviour
 
     [HideInInspector] public Animator fsm;
     public Animator animation;
+    public bool attach = false;
 
     [HideInInspector] public Rigidbody rigidbody;
     // Start is called before the first frame update
@@ -31,5 +32,19 @@ public class Mob : MonoBehaviour
         target = human;
         fsm.SetFloat("Distance", (target.position - transform.position).ProjectOntoPlane(Vector3.up).magnitude);
         fsm.SetBool("Target", true);
+    }
+    public void ResetDetect()
+    {
+        detect.targets.Remove(target);
+        target = detect.SelectTarget();
+        if(target == null)
+            fsm.SetBool("Target", false);
+    }
+
+    public void Attach()
+    {
+        attach = true;
+        fsm.SetTrigger("Attach");
+        
     }
 }

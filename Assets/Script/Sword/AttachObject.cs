@@ -27,6 +27,7 @@ public class AttachObject : MonoBehaviour
             Mob originMob;
             if (TryGetComponent<Mob>(out originMob))
             {
+                originMob.Attach();
                 Destroy(originMob);
                 Destroy(GetComponent<Animator>());
             }
@@ -52,12 +53,11 @@ public class AttachObject : MonoBehaviour
         
         Vector3 forward = sword.transform.forward;
         transform.parent = null;
-        collider.isTrigger = false;
+        _destroy = true;
         _rigidbody.constraints = RigidbodyConstraints.None;
         _rigidbody.useGravity = true;
-        _destroy = true;
         _rigidbody.isKinematic = false;
-        _rigidbody.velocity = (forward + Vector3.up) * Vector3.Dot(forward, transform.position - sword.transform.position) * 3;
+        _rigidbody.velocity = (forward + Vector3.up) * Mathf.Max(5.0f, Vector3.Dot(forward, transform.position - sword.transform.position) * 3);
 
         
         StartCoroutine("DelayDestroy");
@@ -77,9 +77,9 @@ public class AttachObject : MonoBehaviour
     
     public void OnCollisionEnter(Collision other)
     {
-        if ((!sword.attach && !_destroy) || other.transform.gameObject.layer == LayerMask.NameToLayer("Character") || other.gameObject.TryGetComponent<AttachObject>(out _)) return;
+        if ((!sword.attach && !sword.destroy && !_destroy) || other.transform.gameObject.layer == LayerMask.NameToLayer("Character") || other.gameObject.TryGetComponent<AttachObject>(out _)) return;
         Rigidbody otherRigidBody;
-        if (_destroy)
+        if (sword.destroy || _destroy)
         {
             if (other.transform.TryGetComponent<Rigidbody>(out otherRigidBody))
             {

@@ -22,6 +22,7 @@ public class Attack : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _controller.sword.MoveRequest(_controller.transform);
+        animator.SetBool("Damage", false);
         _timer += Time.deltaTime;
         _controller.rigidbody.velocity = Vector3.zero;
        
@@ -38,7 +39,9 @@ public class Attack : StateMachineBehaviour
             if(_controller.attackInput == _attackInput)
                 _controller.animator.Play(_controller.animator.GetCurrentAnimatorStateInfo(0).ToString(), 0, 0.0f);
         }
+        else animator.SetBool("Attack", false);
     }
+    
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

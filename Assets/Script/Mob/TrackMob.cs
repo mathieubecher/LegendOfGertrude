@@ -14,7 +14,7 @@ public class TrackMob : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _mob = animator.GetComponent<Mob>();
-        animator.SetFloat("Distance", (_mob.target.position - animator.transform.position).ProjectOntoPlane(Vector3.up).magnitude);
+        if(_mob.target != null) animator.SetFloat("Distance", (_mob.target.position - animator.transform.position).ProjectOntoPlane(Vector3.up).magnitude);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -28,7 +28,7 @@ public class TrackMob : StateMachineBehaviour
         }
         else
         {
-            animator.SetFloat("Distance", (_mob.target.position - animator.transform.position).ProjectOntoPlane(Vector3.up).magnitude);
+            if(_mob.target != null) animator.SetFloat("Distance", (_mob.target.position - animator.transform.position).ProjectOntoPlane(Vector3.up).magnitude);
             animator.transform.rotation = Quaternion.RotateTowards( animator.transform.rotation,
                 Quaternion.LookRotation(
                     (_mob.target.position - animator.transform.position).ProjectOntoPlane(Vector3.up)), _angularSpeed * Time.deltaTime);
