@@ -20,7 +20,7 @@ public class PanicChicken : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(_chicken.mob == null) return;
-        Vector3 direction = -(_chicken.mob.position - animator.transform.position).ProjectOntoPlane(Vector3.up).normalized;
+        Vector3 direction = -(_chicken.mob.position - animator.transform.position).ProjectOntoPlane(Vector3.up).normalized ;
         animator.transform.rotation = Quaternion.RotateTowards( animator.transform.rotation,
             Quaternion.LookRotation(
                 direction), _panicAngularSpeed * Time.deltaTime);

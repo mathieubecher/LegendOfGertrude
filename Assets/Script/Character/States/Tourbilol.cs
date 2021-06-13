@@ -48,7 +48,6 @@ public class Tourbilol : StateMachineBehaviour
             if (_timer > (1 + _ejected) * (_tourbilolPhase - _loadPhase) / (float) _toEjectAtStart + _loadPhase)
             {
                 ++_ejected;
-                Debug.Log("Eject");
                 _controller.sword.DetachLast();
             }
         }
