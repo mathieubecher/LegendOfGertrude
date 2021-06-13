@@ -15,6 +15,7 @@ public class AttachObject : MonoBehaviour
     private bool _destroy = false;
     private bool _destroyable = true;
 
+    private GameObject _ejectTrail;
 
     private int _originalLayer;
     // Start is called before the first frame update
@@ -50,8 +51,9 @@ public class AttachObject : MonoBehaviour
 
     public void Detach()
     {
-        
+        _ejectTrail = Instantiate(sword.ejectTrail, transform);
         Vector3 forward = sword.transform.forward;
+        _ejectTrail.transform.rotation = Quaternion.LookRotation(-forward);
         transform.parent = null;
         _destroy = true;
         _rigidbody.constraints = RigidbodyConstraints.None;
@@ -67,6 +69,7 @@ public class AttachObject : MonoBehaviour
     IEnumerator DelayDestroy()
     {
         yield return new WaitForSeconds(3.0f);
+        Destroy(_ejectTrail);
         if(_destroyable)Destroy(gameObject);
         else
         {

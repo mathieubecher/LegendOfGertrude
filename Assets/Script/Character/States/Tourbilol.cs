@@ -55,6 +55,7 @@ public class Tourbilol : StateMachineBehaviour
 
         if (_timer > _tourbilolPhase)
         {
+            _controller.sword.Tourbilol(false);
             _controller.sword.destroy = false;
             _controller.animator.SetBool("Tourbilol", false);
             _controller.sword.anchor.localRotation = _swordOrientationStart;

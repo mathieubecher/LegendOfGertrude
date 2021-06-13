@@ -6,9 +6,11 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     [SerializeField] public Transform anchor;
+    [SerializeField] private List<TrailRenderer> _trails;
+    [SerializeField] public GameObject ejectTrail;
+
     [SerializeField] private bool _attach = false;
     public bool destroy = false;
-
     public bool attach
     {
         get => _attach;
@@ -20,6 +22,11 @@ public class Sword : MonoBehaviour
                     attachObject.collider.isTrigger = !value;
             }
             _attach = value;
+            if (_attach)
+            {
+                foreach (var trail in _trails) trail.enabled = true;
+            }
+            else foreach (var trail in _trails) trail.enabled = destroy;
         }
     }
     private Rigidbody _rigidbody;
@@ -48,6 +55,7 @@ public class Sword : MonoBehaviour
     public void Tourbilol(bool start = true)
     {
         destroy = start;
+        foreach (var trail in _trails) trail.enabled = start || attach;
         foreach (var attachObject in attachObjects)
         {
             attachObject.collider.isTrigger = !start;
