@@ -56,6 +56,8 @@
               <e p="PanicChicken.cs" t="Include" />
             </e>
           </e>
+          <e p="CompleteHexaforce.cs" t="Include" />
+          <e p="Hexaforce.cs" t="Include" />
           <e p="Mob" t="Include">
             <e p="AnimListenMob.cs" t="Include" />
             <e p="AttackMob.cs" t="Include" />

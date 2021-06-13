@@ -80,6 +80,12 @@ public class AttachObject : MonoBehaviour
     
     public void OnCollisionEnter(Collision other)
     {
+        if (other.collider.gameObject.layer == LayerMask.NameToLayer("Hexaforce"))
+        {
+            FindObjectOfType<Controller>().AddHexaforce(other.collider.gameObject.GetComponent<Hexaforce>());
+            return;
+        }
+        
         if ((!sword.attach && !sword.destroy && !_destroy) || other.transform.gameObject.layer == LayerMask.NameToLayer("Character") || other.gameObject.TryGetComponent<AttachObject>(out _)) return;
         Rigidbody otherRigidBody;
         if (sword.destroy || _destroy)
@@ -108,4 +114,5 @@ public class AttachObject : MonoBehaviour
             otherRigidBody.isKinematic = true;
         }
     }
+
 }

@@ -13,7 +13,13 @@ public class Controller : MonoBehaviour
     private Animator _fsm;
     public int attackInput;
     public float life = 6.0f;
-
+    public int hexaforce = 0;
+    public List<Hexaforce> hexaforces;
+    public void AddHexaforce(Hexaforce fragHexaforce)
+    {
+        if (hexaforces.Contains(fragHexaforce)) return;
+        hexaforces.Add(fragHexaforce);
+    }
     [HideInInspector] public Rigidbody rigidbody;
     public Vector2 tilt;
     
@@ -22,6 +28,7 @@ public class Controller : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         _fsm = GetComponent<Animator>();
+        hexaforces = new List<Hexaforce>();
     }
 
     // Update is called once per frame
@@ -93,4 +100,5 @@ public class Controller : MonoBehaviour
         _fsm.SetTrigger("Dead");
     }
 
+    
 }

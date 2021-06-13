@@ -22,6 +22,7 @@ public class AttackMob : StateMachineBehaviour
         animator.SetBool("Attack", true);
         _mob.rigidbody.velocity = Vector3.zero;
         damage = false;
+        timer = 0.0f;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
