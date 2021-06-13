@@ -15,6 +15,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/AnimFunction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/CompleteHexaforce.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/States/Dead.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/PNJDialog.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/States/Move.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Mob/DetectHuman.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Hexaforce.cs" root0="FORCE_HIGHLIGHTING" />
@@ -67,8 +68,10 @@
         <option value="$PROJECT_DIR$/Assets/Script/Character/Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Chicken/DetectMob.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/States/Tourbilol.cs" />
+        <option value="$PROJECT_DIR$/Assets/FixedRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/PNJDialog.cs" />
       </list>
     </option>
   </component>
@@ -105,7 +108,7 @@
       <workItem from="1623448834322" duration="1496000" />
       <workItem from="1623482747005" duration="33903000" />
       <workItem from="1623534989433" duration="6831000" />
-      <workItem from="1623568528432" duration="28367000" />
+      <workItem from="1623568528432" duration="30724000" />
     </task>
     <servers />
   </component>
