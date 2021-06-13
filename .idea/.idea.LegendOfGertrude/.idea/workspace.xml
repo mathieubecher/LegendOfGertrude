@@ -35,6 +35,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/States/Tourbilol.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Character/States/AttachMob.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Sword/HitVFX.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/UI/HUDmanager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -45,7 +46,6 @@
         <option value="$PROJECT_DIR$/Assets/Script/Mob/IddleMob.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Mob/JumpMob.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Mob/AnimListenMob.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Mob/DetectHuman.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/States/Dead.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/States/Damage.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/States/Move.cs" />
@@ -54,19 +54,20 @@
         <option value="$PROJECT_DIR$/Assets/Script/Mob/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Mob/Mob.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Mob/TrackMob.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Chicken/DetectMob.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Chicken/Chicken.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Sword/HitVFX.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Chicken/State/PanicChicken.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Mob/AttackMob.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Hexaforce.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/CompleteHexaforce.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Character/Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/States/Tourbilol.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Chicken/State/ChillChicken.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/AnimFunction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Mob/DetectHuman.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Sword/Sword.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Mob/AttackMob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Character/Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Chicken/DetectMob.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
       </list>
     </option>
   </component>
@@ -103,7 +104,7 @@
       <workItem from="1623448834322" duration="1496000" />
       <workItem from="1623482747005" duration="33903000" />
       <workItem from="1623534989433" duration="6831000" />
-      <workItem from="1623568528432" duration="23569000" />
+      <workItem from="1623568528432" duration="26363000" />
     </task>
     <servers />
   </component>

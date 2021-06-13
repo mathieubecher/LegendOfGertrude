@@ -342,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8baf795e43a6a894ba908da47d4994e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
   anchor: {fileID: 0}
   _trails:
   - {fileID: 6806625836294407455}
@@ -349,6 +350,18 @@ MonoBehaviour:
   - {fileID: 3855106790102380622}
   ejectTrail: {fileID: 57628828367037950, guid: 3e9ec6fd25add694283c929c7d42dbf8, type: 3}
   attachVFX: {fileID: 8013199311592191459, guid: 65c55a3a64325594b8bce11c3d764831, type: 3}
+  chicken:
+  - {fileID: 8300000, guid: f97c6c56704685f498779290abbf3a45, type: 3}
+  - {fileID: 8300000, guid: 4b94924ef5c24664a87ac273a9eba4fc, type: 3}
+  - {fileID: 8300000, guid: 53ce0af8dfac55b4da471ba2ff8b7137, type: 3}
+  - {fileID: 8300000, guid: 931c3c3a632d8334e9519127c50fedc1, type: 3}
+  old:
+  - {fileID: 8300000, guid: 11e34ff8b1e1a954e8f1e9e0fcdb2517, type: 3}
+  - {fileID: 8300000, guid: 63dc331e8de37314baaebe2fa4818a96, type: 3}
+  mob:
+  - {fileID: 8300000, guid: 1b1ea50b51f696944b8142989cb9dbb4, type: 3}
+  - {fileID: 8300000, guid: 32e2334ff34b2f445a942b7c01d97954, type: 3}
+  - {fileID: 8300000, guid: 5dcdbef917cc58743bee209ee2e71e9b, type: 3}
   _attach: 0
   destroy: 0
   attachObjects: []

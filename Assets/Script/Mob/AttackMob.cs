@@ -7,7 +7,7 @@ public class AttackMob : StateMachineBehaviour
 {
     private Mob _mob;
     [SerializeField] private float _damageTimer = 0.4f;
-    [SerializeField] private float _damageValue = 0.5f;
+    [SerializeField] private int _damageValue = 1;
     [SerializeField] private bool damage = false;
     
     [SerializeField] private float _damageDistance = 2.0f;
