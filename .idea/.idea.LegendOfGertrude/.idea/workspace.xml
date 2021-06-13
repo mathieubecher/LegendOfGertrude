@@ -60,7 +60,6 @@
         <option value="$PROJECT_DIR$/Assets/Script/Sword/HitVFX.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Chicken/State/PanicChicken.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Hexaforce.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/CompleteHexaforce.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Chicken/State/ChillChicken.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Character/AnimFunction.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Mob/DetectHuman.cs" />
@@ -72,6 +71,7 @@
         <option value="$PROJECT_DIR$/Assets/FixedRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Sword/AttachObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/PNJDialog.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/CompleteHexaforce.cs" />
       </list>
     </option>
   </component>
@@ -108,7 +108,7 @@
       <workItem from="1623448834322" duration="1496000" />
       <workItem from="1623482747005" duration="33903000" />
       <workItem from="1623534989433" duration="6831000" />
-      <workItem from="1623568528432" duration="30724000" />
+      <workItem from="1623568528432" duration="31438000" />
     </task>
     <servers />
   </component>
