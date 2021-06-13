@@ -23,7 +23,6 @@ public class DetectHuman : MonoBehaviour
     {
         for (int i = targets.Count - 1; i >= 0; --i)
         {
-            Debug.Log("test + " + targets[i]);
             if (targets[i] == null || targets[i].gameObject == null) targets.RemoveAt(i);
         }
         if (targets.Count == 0) return null;
