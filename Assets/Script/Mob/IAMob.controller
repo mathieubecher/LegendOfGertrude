@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageTimer: 0.3
-  _damageValue: 0.5
+  _damageValue: 1
   damage: 0
   _damageDistance: 2
 --- !u!1102 &-7823125159850547163

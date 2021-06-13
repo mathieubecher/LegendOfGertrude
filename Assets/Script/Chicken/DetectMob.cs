@@ -13,6 +13,10 @@ public class DetectMob : MonoBehaviour
         {
             if(_mobs.Count == 0) return null;
             Transform nearest = _mobs[0];
+            for (int i = _mobs.Count - 1; i >= 0; --i)
+            {
+                if (_mobs[i] == null || _mobs[i].gameObject == null) _mobs.RemoveAt(i);
+            }
             foreach (var nearMob in _mobs)
             {
                 if ((nearMob.position - transform.position).magnitude <

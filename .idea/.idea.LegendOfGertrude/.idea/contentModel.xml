@@ -73,6 +73,10 @@
             <e p="HitVFX.cs" t="Include" />
             <e p="Sword.cs" t="Include" />
           </e>
+          <e p="UI" t="Include">
+            <e p="HUDmanager.cs" t="Include" />
+            <e p="Lone_Heart_Fill.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="LegendOfGertrude.sln" t="IncludeFlat" />

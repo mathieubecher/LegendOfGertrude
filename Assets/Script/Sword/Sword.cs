@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
+    [SerializeField] public Controller controller;
     [SerializeField] public Transform anchor;
     [SerializeField] private List<TrailRenderer> _trails;
     [SerializeField] public GameObject ejectTrail;
     [SerializeField] public GameObject attachVFX;
+    
+    
+    [SerializeField] public List<AudioClip> chicken;
+    [SerializeField] public List<AudioClip> old;
+    [SerializeField] public List<AudioClip> mob;
+    
 
     [SerializeField] private bool _attach = false;
     public bool destroy = false;
@@ -41,7 +48,7 @@ public class Sword : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         attachObjects = new List<AttachObject>();
-
+        controller = FindObjectOfType<Controller>();
     }
 
     public void Attach(AttachObject other)

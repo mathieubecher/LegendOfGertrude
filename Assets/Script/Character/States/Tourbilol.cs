@@ -10,6 +10,12 @@ public class Tourbilol : StateMachineBehaviour
     [SerializeField] private float _tourbilolPhase = 4f;
     [SerializeField] private float _stunPhase = 5f;
     [SerializeField] private Vector3 _swordOrientation;
+    
+    [SerializeField] private AudioClip _sourcePreTourbilol;
+    private bool _playedSourcePreTourbilol;
+    [SerializeField] private AudioClip _sourceTourbilol;
+    private bool _playedSourceTourbilol;
+    
     private Quaternion _swordOrientationStart;
 
     public float _timer = 0.0f;
@@ -21,6 +27,8 @@ public class Tourbilol : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        _playedSourcePreTourbilol = false;
+        _playedSourceTourbilol = false;
         _controller = animator.GetComponent<Controller>();
         _timer = 0.0f;
         _toEjectAtStart = 5 + _controller.sword.attachObjects.Count / 2;
@@ -35,11 +43,20 @@ public class Tourbilol : StateMachineBehaviour
     {
         _timer += Time.deltaTime;
         _controller.sword.MoveRequest(_controller.transform);
+        if (!_playedSourcePreTourbilol)
+        {
+            _playedSourcePreTourbilol = true;
+            _controller.source.PlayOneShot(_sourcePreTourbilol);
+        }
 
         if (_timer > _loadPhase)
         {
             if(!_controller.sword.destroy) _controller.sword.Tourbilol(true);
-            
+            if (!_playedSourceTourbilol)
+            {
+                _playedSourceTourbilol = true;
+                _controller.source.PlayOneShot(_sourceTourbilol);
+            }
             _controller.sword.anchor.rotation = Quaternion.LookRotation((_controller.sword.anchor.position - animator.transform.position).ProjectOntoPlane(Vector3.up));
             animator.SetBool("Tourbilol", true);
             animator.SetBool("Damage", false);
@@ -74,7 +91,8 @@ public class Tourbilol : StateMachineBehaviour
         _controller.sword.Tourbilol(false);
         _controller.animator.SetBool("LoadTourbilol", false);
         _controller.sword.anchor.localRotation = _swordOrientationStart;
-        
+        _controller.source.Stop();
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
