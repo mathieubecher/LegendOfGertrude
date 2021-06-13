@@ -15,6 +15,7 @@ public class Sword : MonoBehaviour
     [SerializeField] public List<AudioClip> chicken;
     [SerializeField] public List<AudioClip> old;
     [SerializeField] public List<AudioClip> mob;
+    [SerializeField] public List<AudioClip> gertrude;
     
 
     [SerializeField] private bool _attach = false;

@@ -6,6 +6,7 @@
     <e p="C:\Users\mbelk\Unity\LegendOfGertrude" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="FixedRotation.cs" t="Include" />
         <e p="Graph" t="Include">
           <e p="EnvironmentPack" t="Include">
             <e p="LowPolyFencePack" t="Include">
@@ -30,6 +31,13 @@
               </e>
               <e p="Scripts" t="Include">
                 <e p="LightImprove.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Groundtexture" t="Include">
+            <e p="Hand Painted Seamless ClayGround Texture" t="Include">
+              <e p="Documentation" t="Include">
+                <e p="Documentation.txt" t="Include" />
               </e>
             </e>
           </e>
