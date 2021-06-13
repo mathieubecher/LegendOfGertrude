@@ -19,6 +19,8 @@ public class Controller : MonoBehaviour
     {
         if (hexaforces.Contains(fragHexaforce)) return;
         hexaforces.Add(fragHexaforce);
+        
+        fragHexaforce.GetComponent<Animator>().SetTrigger("Active");
     }
     [HideInInspector] public Rigidbody rigidbody;
     public Vector2 tilt;
@@ -66,7 +68,6 @@ public class Controller : MonoBehaviour
     
     public void Tourbilol(InputAction.CallbackContext context)
     {
-        Debug.Log("test");
         if (context.performed) _fsm.SetBool("StartTourbilol", true);
         else if(context.canceled) _fsm.SetBool("StartTourbilol", false);
     }
