@@ -55,6 +55,7 @@
             <e p="IddleMob.cs" t="Include" />
             <e p="JumpMob.cs" t="Include" />
             <e p="Mob.cs" t="Include" />
+            <e p="Spawner.cs" t="Include" />
             <e p="TrackMob.cs" t="Include" />
           </e>
           <e p="Sword" t="Include">

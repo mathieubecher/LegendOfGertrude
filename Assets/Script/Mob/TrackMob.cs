@@ -20,8 +20,8 @@ public class TrackMob : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(_mob.target == null) animator.SetBool("Target", false);
-        else if ((_mob.target.position - animator.transform.position).magnitude > _lostDist)
+        //if(_mob.target == null) animator.SetBool("Target", false);
+        if ((_mob.target.position - animator.transform.position).magnitude > _lostDist)
         {
             _mob.target = null;
             animator.SetBool("Target", false);

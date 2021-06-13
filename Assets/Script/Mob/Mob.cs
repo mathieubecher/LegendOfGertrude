@@ -25,6 +25,10 @@ public class Mob : MonoBehaviour
     void Update()
     {
         animation.SetFloat("Speed", rigidbody.velocity.magnitude);
+        if (target == null)
+        {
+            ResetDetect();
+        }
     }
 
     public void DetectHuman(Transform human)
