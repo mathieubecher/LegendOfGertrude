@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cinemachine.Utility;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public class Controller : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Controller : MonoBehaviour
 
     private HUDmanager _hud;
     public AudioSource source;
+    public List<AudioClip> damage;
     public Animator animator;
     private Animator _fsm;
     public int attackInput;
@@ -42,6 +44,7 @@ public class Controller : MonoBehaviour
         _hud.Health = life;
         _hud.Hexaforce = hexaforces.Count;
         _hud.Weight = (int)Mathf.Ceil(sword.mass);
+        if(_cooldown >= 0) _cooldown -= Time.deltaTime;
 
     }
 
@@ -87,9 +90,11 @@ public class Controller : MonoBehaviour
     {
         _fsm.SetBool("Damage", false);
     }
-    
+
+    private float _cooldown = -1;
     public void Damage(int damageValue)
     {
+        if (_cooldown > 0) return;
         life -= damageValue;
         if (life <= 0)
         {
@@ -97,6 +102,8 @@ public class Controller : MonoBehaviour
         }
         else
         {
+            source.PlayOneShot(damage[Random.Range(0, damage.Count)]);
+            _cooldown = 1.0f;
             _fsm.SetBool("Damage", true);
         }
     }

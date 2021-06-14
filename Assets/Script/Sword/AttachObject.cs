@@ -63,7 +63,11 @@ public class AttachObject : MonoBehaviour
             GetComponent<Animator>().SetBool("Attach", true);
         }
         else if (_originalLayer == LayerMask.NameToLayer("Gertrude"))
+        {
             source.PlayOneShot(sword.gertrude[Random.Range(0, sword.gertrude.Count)]);
+            
+            GetComponent<PNJDialog>().animator.SetTrigger("StickedToSword");
+        }
         
         sword.Attach(this);
     }
@@ -104,7 +108,7 @@ public class AttachObject : MonoBehaviour
             {
                 GetComponent<Animator>().SetBool("Attach", false);
             }
-            else if(_originalLayer == LayerMask.NameToLayer("PNJ"))
+            else if(_originalLayer == LayerMask.NameToLayer("PNJ") || _originalLayer == LayerMask.NameToLayer("Gertrude"))
             {
                 GetComponent<PNJDialog>().animator.SetTrigger("Reset");
             }

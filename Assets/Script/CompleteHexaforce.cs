@@ -31,7 +31,7 @@ public class CompleteHexaforce : MonoBehaviour
         if (_controller.hexaforces.Count == 6 && inside && !end)
         {
             Debug.Log("End");    
-            animator.SetTrigger("Victory");
+            animator.SetTrigger("END");
             end = true;
         }
     }

@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lostDist: 15
-  _trackSpeed: 5
+  _trackSpeed: 4
   _angularSpeed: 360
 --- !u!114 &-991538909365489337
 MonoBehaviour:

@@ -25,6 +25,8 @@ public class Attack : StateMachineBehaviour
         animator.SetBool("Damage", false);
         _timer += Time.deltaTime;
         _controller.rigidbody.velocity = Vector3.zero;
+        if(_timer > 1) 
+            animator.SetBool("Attack", false);
        
     }
 
@@ -33,13 +35,6 @@ public class Attack : StateMachineBehaviour
     {
         _controller.sword.attach = false;
         _controller.animator.SetInteger("AttackState", -1);
-        if (_controller.attackInput >= 0)
-        {
-            animator.SetBool("Attack", true);
-            if(_controller.attackInput == _attackInput)
-                _controller.animator.Play(_controller.animator.GetCurrentAnimatorStateInfo(0).ToString(), 0, 0.0f);
-        }
-        else animator.SetBool("Attack", false);
     }
     
 

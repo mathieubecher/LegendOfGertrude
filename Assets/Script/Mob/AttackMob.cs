@@ -29,7 +29,7 @@ public class AttackMob : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer += Time.deltaTime;
-        if (timer > _damageTimer && !_mob.attach)
+        if (timer > _damageTimer && !_mob.attach && _mob.target != null )
         {
             if (!damage && _damageDistance > (_mob.target.position - animator.transform.position).ProjectOntoPlane(Vector3.up)
                 .magnitude)

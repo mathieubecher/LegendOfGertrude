@@ -1,30 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1101 &-8223074941939011837
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Damage
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 6035000136694563878}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0
-  m_HasExitTime: 0
-  m_HasFixedDuration: 0
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &-7657338337908685518
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -92,7 +67,6 @@ AnimatorState:
   - {fileID: 8138417800104070543}
   - {fileID: -7200039804654522613}
   - {fileID: 2558960169613739489}
-  - {fileID: -8223074941939011837}
   m_StateMachineBehaviours:
   - {fileID: 3450259485620474029}
   m_Position: {x: 50, y: 50, z: 0}
@@ -121,7 +95,6 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7657338337908685518}
-  - {fileID: -3255209281937187619}
   m_StateMachineBehaviours:
   - {fileID: -1707452373738383660}
   m_Position: {x: 50, y: 50, z: 0}
@@ -152,7 +125,7 @@ AnimatorStateMachine:
     m_Position: {x: 280, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4913547029948852255}
-    m_Position: {x: 520, y: 110, z: 0}
+    m_Position: {x: 560, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6902773765035800676}
     m_Position: {x: 490, y: -30, z: 0}
@@ -184,34 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8ed14a4e602c14aa2680170944452f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1101 &-3255209281937187619
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Damage
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: Tourbilol
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 6035000136694563878}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 1
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!114 &-1707452373738383660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -397,31 +342,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: 0
---- !u!1101 &5748227277282355756
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Damage
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -6931393316328415362}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
-  m_HasExitTime: 0
-  m_HasFixedDuration: 0
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1102 &6035000136694563878
 AnimatorState:
   serializedVersion: 6
@@ -432,8 +352,7 @@ AnimatorState:
   m_Name: Damage
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 5748227277282355756}
+  m_Transitions: []
   m_StateMachineBehaviours:
   - {fileID: -6094922106359950485}
   m_Position: {x: 50, y: 50, z: 0}

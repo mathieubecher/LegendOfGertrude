@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mob: {fileID: 6153252139108168693, guid: 0f63285e1e5cbbe49ac3159f6e5b5149, type: 3}
-  _respawnTimer: 20
+  _respawnTimer: 60
+  instance: {fileID: 0}

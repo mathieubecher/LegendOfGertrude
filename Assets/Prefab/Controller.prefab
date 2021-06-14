@@ -52,10 +52,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sword: {fileID: 0}
   source: {fileID: 8452546295538222675}
+  damage:
+  - {fileID: 8300000, guid: d084bdcdd83f07a4a8ae74ae27b372c9, type: 3}
+  - {fileID: 8300000, guid: c97a22301480b0e4090781d64b88bb08, type: 3}
+  - {fileID: 8300000, guid: 64ee010ab40ba7c4a8807a4978776089, type: 3}
   animator: {fileID: 4736938521200976651}
   attackInput: 0
   life: 6
-  hexaforce: 0
   hexaforces: []
   rigidbody: {fileID: 0}
   tilt: {x: 0, y: 0}
